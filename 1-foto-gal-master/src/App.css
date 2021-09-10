@@ -1,0 +1,150 @@
+#overlay {
+  margin: 0;
+  width:100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .75);
+  color: white;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  pointer-events: none;
+}
+#overlay.visible {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#overlay img {
+  display: block;
+  margin: 0 auto;
+  height: calc(100% - 15vh);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#overlay a{
+  display: block;
+  margin: 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color .5s;
+  cursor: pointer;
+}
+
+#overlay a:hover{
+  background-color: red;
+  transition: background-color .5s;
+}
+
+#masonry-effect {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+.item {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+  font-size: 1.25rem;
+  font-variation-settings: 'wght' 600;
+  cursor: pointer;
+  overflow: hidden;
+}
+.item .overlay{
+  position: absolute;
+  padding: 20px;
+  text-align: left;
+  opacity: 0;
+  width: calc(100% - 40px);
+  height: calc(100% - 46px);
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 50.1%,rgba(255,255,255,0) 100%);
+}
+.item .overlay h1{
+  font-size: 12pt;
+}
+.item .overlay p{
+  font-size: 10pt;
+  max-width: 55%;
+  font-weight: bold;
+}
+.item:hover .overlay{
+  opacity: 1;
+}
+
+.item img {
+max-width: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-header .title{
+  font-size: 40pt;
+  margin-bottom: 0.5%;
+}
+
+.App-header .info{
+  color: #5f6059;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Wrapper {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.social-icon {
+  float: left;
+  padding: 20px;
+  margin-top: 1%;
+  font-size: 20pt;
+}
+
+.social-icon:hover {
+  -webkit-transform: rotate(15deg) scale(1.4);
+	transform: rotate(15deg) scale(1.4);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+
